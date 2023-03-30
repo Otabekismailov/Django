@@ -16,5 +16,12 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     is_true = models.BooleanField(default=False)
 
+    def fun(self):
+        if self.is_true == True:
+            return "Rost"
+        else:
+            return "Yolg'on"
+
     def __str__(self):
-        return f'{self.question}-{self.text}'
+
+        return f'{self.question}-{self.text}-{self.fun()} '
