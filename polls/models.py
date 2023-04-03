@@ -18,11 +18,10 @@ class Choice(models.Model):
 
     def fun(self):
         if self.is_true == True:
-            return True
+            return "To'g'ri Javob "
         else:
-            return False
+            return "No'to'gri Javob"
 
     def __str__(self):
 
         return f'{self.question}-{self.text}-{self.fun()} '
-
