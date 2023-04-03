@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<b>Text:</b> {{ question.title }}
+<br>
+<b>Publication date:</b> {{ question.date }}
+<!--    <ul>-->
+<!--        {% for choice in question.choice_set.all %}-->
+<!--            <li>{{ choice.text }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ question.title }}</h1></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ choice.text }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <input type="submit" value="Enter">
+</form>
+
+
+<hr>
+<a href="{% url 'polls:questions_list' %}">🔙 Orqaga</a>
+{% endblock %}
+
