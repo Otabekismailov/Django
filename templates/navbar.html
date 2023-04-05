@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'polls:homepage' %}">Pdp Unversity P10 Grup Python</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'polls:homepage' %}">Bosh sahifa</a> <span
+                    class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'polls:questions_list' %}">Savollar</a> <span
+                    class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'polls:list_of_questions' %}"
+                   id="navbarScrollingDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Savollar Ro'yxati
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Ovozberish</a></li>
+                    <li><a class="dropdown-item" href="#">Another dadsadsa ction</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<hr>
+<nav class="navbar navbar-light bg-light">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success me-md-2" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+

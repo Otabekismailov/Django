@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yangiliklar</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Kun yangiliklari</h1>
+    <ul>
+    {% for post in object_list %}
+        <li><h2>{{ post.title }}</h2><br>{{ post.id }}</li><br>
+    {% endfor %}
+{% endblock content %}
+</ul>
+</body>
+</html>
